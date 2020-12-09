@@ -38,15 +38,13 @@ public class FuerzaArmada {
 	}
 
 	public Vehiculo buscarvehiculo(int i) {
-		Vehiculo vehiculo = null;
 		for (Vehiculo x : convoy) {
-			if (x.getIdentificador().equals(i)) {
-				vehiculo = x;
+			if ((x.getIdentificador().equals(i))==true) {
+				return x;
 			} 
 		}
-		return vehiculo;
+		return null;
 	}
-	
 	
 	
 	
@@ -54,7 +52,14 @@ public class FuerzaArmada {
 		Boolean estado = false;
 		Batalla batalla = batallas.get(string);// identifica
 		TipoDeBatalla tipo = batalla.getTipo();
-		Vehiculo vehiculo = buscarvehiculo(i);
+		Vehiculo vehiculo=null;
+		
+		if(buscarvehiculo(i)!=null) {
+			vehiculo=buscarvehiculo(i);
+		}
+		else {
+			throw new VehiculoInexistente("Vehiculo inexistente");
+		}
 
 
 		switch (tipo) {

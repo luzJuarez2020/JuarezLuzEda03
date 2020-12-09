@@ -51,7 +51,7 @@ public class Recuperatorio {
 	@Test
 	public void queSePuedaArmarElConvoy() {
 		FuerzaArmada argentina = new FuerzaArmada();
-		
+	
 		argentina.agregarVehiculo(new Avion(1, "A-10"));
 		argentina.agregarVehiculo(new Avion(2, "A-10"));
 		argentina.agregarVehiculo(new Avion(3, "F-102"));
