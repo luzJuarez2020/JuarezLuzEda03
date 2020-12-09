@@ -64,24 +64,24 @@ public class FuerzaArmada {
 
 		switch (tipo) {
 		case TERRESTRE:
-			if (batalla instanceof Terrestre) {
-				batalla.setVehiculosEnLaBatalla(vehiculo);
+			if (vehiculo instanceof Terrestre) {
+				batalla.agregarvehiculo(vehiculo);
 				estado = true;
 			} else {
 				throw new VehiculoIncompatible("No es un vehiculo terrestre");
 			}
 			break;
 		case NAVAL:
-			if (batalla instanceof Acuatico) {
-				batalla.setVehiculosEnLaBatalla(vehiculo);
+			if (vehiculo instanceof Acuatico) {
+				batalla.agregarvehiculo(vehiculo);
 				estado = true;
 			} else {
 				throw new VehiculoIncompatible("No es un vehiculo acuatico");
 			}
 			break;
 		case AEREA:
-			if (batalla instanceof Volador) {
-				batalla.setVehiculosEnLaBatalla(vehiculo);
+			if (vehiculo instanceof Volador) {
+				batalla.agregarvehiculo(vehiculo);
 				estado = true;
 			} else {
 				throw new VehiculoIncompatible("No es un vehiculo volador");

@@ -60,16 +60,15 @@ public class Batalla {
 		this.tipo = tipo;
 	}
 
+	
 
 	public Set<Vehiculo> getVehiculosEnLaBatalla() {
 		return vehiculosEnLaBatalla;
 	}
 
 
-	public void setVehiculosEnLaBatalla(Vehiculo vehiculo) {
-		this.vehiculosEnLaBatalla = (Set<Vehiculo>) vehiculo;
-	}
 
+	
 
 	public String getNombre() {
 		return nombre;
